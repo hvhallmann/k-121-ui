@@ -1,21 +1,21 @@
 'use strict';
 
-// Register `phoneDetail` component, along with its associated controller and template
 angular.
   module('personDetail').
   component('personDetail', {
     templateUrl: 'person-detail/person-detail.template.html',
-    controller: ['$routeParams', 'People',
-      function PersonDetailController($routeParams, Person) {
+    controller: ['$routeParams', 'People', '$scope',
+      function PersonDetailController($routeParams, Person, $scope) {
         var self = this;
-        self.person = Person.get({_id: $routeParams.personId}, function(person) {
-          console.log('pers', person);
-          // self.setImage(phone.images[0]);
+        Person.resourceItem({_id: $routeParams.personId}).query(function(item) {
+          self.person = item[0];
         });
 
-        // self.setImage = function setImage(imageUrl) {
-        //   self.mainImageUrl = imageUrl;
-        // };
+        $scope.editPerson = function(personId) { //Update the edited movie. Issues a PUT to /api/movies/:id
+          console.log('im item', personId);
+          console.log('im hooo', $scope);
+          Person.updateResource.update({id: personId}, {name: $scope.person.name, email: $scope.person.email});
+        };
       }
     ]
   });

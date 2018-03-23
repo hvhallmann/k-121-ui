@@ -7,7 +7,7 @@ angular.
     templateUrl: 'people-list/people-list.template.html',
     controller: ['People',
       function PeopleListController(People) {
-        this.people = People.query();
+        this.people = People.resourceList.query();
       }
     ]
   });

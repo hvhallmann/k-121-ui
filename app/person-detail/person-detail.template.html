@@ -8,9 +8,28 @@
 
 <p>{{$ctrl.person.email}}</p>
 
-<div class="form-group">
-  <label for="title" class="col-sm-2 control-label">Name</label>
-  <div class="col-sm-10">
-    <input type="text" ng-model="person.name" class="form-control" id="name" placeholder="Change Name Here"/>
+<h2>Change user properties with the form below</h2>
+
+<form role="form" ng-submit="editPerson($ctrl.person._id)">
+
+  <div>
+    <label for="name">Name</label>
+    <div>
+      <input type="text" ng-model="person.name" id="name" placeholder="Change Name Here"/>
+    </div>
   </div>
-</div>
+  
+  <div>
+    <label for="name">E-mail</label>
+    <div>
+      <input type="text" ng-model="person.email" id="email" placeholder="Change e-mail Here"/>
+    </div>
+  </div>
+  
+  <div>
+    <div>
+      <input type="submit" class="btn btn-primary" value="Save"/>
+    </div>
+  </div>
+
+</form>
