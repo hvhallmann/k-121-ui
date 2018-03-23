@@ -10,6 +10,9 @@ angular.
         when('/people', {
           template: '<people-list></people-list>'
         }).
+        when('/person/:personId', {
+          template: '<person-detail></person-detail>'
+        }).
         when('/phones', {
           template: '<phone-list></phone-list>'
         }).

@@ -1,0 +1,16 @@
+<div class="phone-images">
+  <img ng-src="{{img}}" class="phone"
+      ng-class="{selected: img === $ctrl.mainImageUrl}"
+      ng-repeat="img in $ctrl.phone.images" />
+</div>
+
+<h1>{{$ctrl.person.name}}</h1>
+
+<p>{{$ctrl.person.email}}</p>
+
+<div class="form-group">
+  <label for="title" class="col-sm-2 control-label">Name</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="person.name" class="form-control" id="name" placeholder="Change Name Here"/>
+  </div>
+</div>

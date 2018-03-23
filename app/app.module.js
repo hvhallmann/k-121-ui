@@ -6,6 +6,7 @@ angular.module('phonecatApp', [
   'ngRoute',
   'core',
   'phoneDetail',
+  'personDetail',
   'phoneList',
   'peopleList'
 ]);

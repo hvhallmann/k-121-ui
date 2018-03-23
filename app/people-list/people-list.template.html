@@ -2,13 +2,12 @@
   <!--Body content-->
 
   <ul class="phones">
-    <li ng-repeat="people in $ctrl.people" class="thumbnail phone-list-item">
-      <a href="#!/phones/{{phone.id}}" class="thumb">
-        <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+    <li ng-repeat="person in $ctrl.people" class="thumbnail phone-list-item">
+      <a href="#!/phones/{{person.id}}" class="thumb">
+        <img ng-src="{{person.imageUrl}}" alt="{{person.name}}" />
       </a>
-      <a href="#!/phones/{{phone.id}}">{{people.name}}</a>
-      <p>{{phone.email}}</p>
-      <p>{{phone.snippet}</p>
+      <a href="#!/person/{{person._id}}">{{person.name}}</a>
+      <p>{{person.email}}</p>
     </li>
   </ul>
 
