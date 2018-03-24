@@ -33,7 +33,7 @@ angular.
         }
       });
 
-      var sendResource = $resource('http://localhost:3000/people/send-invites', {}, {
+      var sendResource = $resource('http://localhost:3000/people/send-emails', {}, {
         save: {
           method: "POST",
         }
