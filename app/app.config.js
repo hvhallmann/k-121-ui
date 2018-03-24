@@ -13,12 +13,6 @@ angular.
         when('/person/:personId', {
           template: '<person-detail></person-detail>'
         }).
-        when('/phones', {
-          template: '<phone-list></phone-list>'
-        }).
-        when('/phones/:phoneId', {
-          template: '<phone-detail></phone-detail>'
-        }).
         otherwise('/people');
     }
   ]);

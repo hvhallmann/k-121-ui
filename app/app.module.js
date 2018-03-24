@@ -5,8 +5,6 @@ angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
   'core',
-  'phoneDetail',
   'personDetail',
-  'phoneList',
   'peopleList'
 ]);

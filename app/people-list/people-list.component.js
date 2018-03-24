@@ -16,7 +16,6 @@ angular.
         };
 
         $scope.sendMails = function() {
-          console.log('send mails');
           People.sendResource.save(undefined, function() {
             $window.location.href = '';
           });
