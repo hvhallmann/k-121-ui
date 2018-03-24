@@ -21,10 +21,31 @@ angular.
         }
       });
 
+      var deleteResource = $resource('http://localhost:3000/person/delete/:id', {}, {
+        update: {
+          method: "DELETE",
+        }
+      });
+
+      var insertResource = $resource('http://localhost:3000/person/create', {}, {
+        save: {
+          method: "POST",
+        }
+      });
+
+      var sendResource = $resource('http://localhost:3000/people/send-invites', {}, {
+        save: {
+          method: "POST",
+        }
+      });
+
       return {
         resourceList,
         resourceItem,
-        updateResource
+        updateResource,
+        deleteResource,
+        insertResource,
+        sendResource
       }
     }
   ]);
